@@ -1,0 +1,5 @@
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1b\bin\Debug\1b.exe
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1b\bin\Debug\1b.pdb
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1b\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1b\obj\Debug\1b.exe
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1b\obj\Debug\1b.pdb

@@ -1,0 +1,7 @@
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1a\bin\Debug\1a.exe
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1a\bin\Debug\1a.pdb
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1a\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1a\obj\Debug\1a.exe
+C:\Users\Vartotojas\AppData\Local\Temporary Projects\1a\obj\Debug\1a.pdb
+C:\Users\Vartotojas\Desktop\Praktiniai pavyzdžiai C#\1-os uzduoties failai\1a\1a\obj\Debug\1a.exe
+C:\Users\Vartotojas\Desktop\Praktiniai pavyzdžiai C#\1-os uzduoties failai\1a\1a\obj\Debug\1a.pdb

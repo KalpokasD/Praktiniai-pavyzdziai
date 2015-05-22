@@ -1,0 +1,131 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class PagrindineKlase
+    {
+        static void Main(string[] args)
+        {
+            int[] Masyvas;
+            MasyvasIO NMasyvasIO = new MasyvasIO();
+            Rikiavimas NRikiavimas = new Rikiavimas();
+            ApdorokMasyva NApdorokMasyva = new ApdorokMasyva();
+           
+            Masyvas = NMasyvasIO.Pildyk();
+            Masyvas = NApdorokMasyva.ApdorokMasyvaa(Masyvas);
+            Console.WriteLine();
+            Console.WriteLine("Nerikiuotas masyvas: ");
+            NMasyvasIO.Spausdink(Masyvas);
+            Console.WriteLine();
+            Console.WriteLine("Didejimo tvarka rikiuotas masyvas: ");
+            Masyvas = NRikiavimas.RikiuokD(Masyvas);
+            NMasyvasIO.Spausdink(Masyvas);
+            Console.WriteLine();
+            Console.WriteLine("Mazejimo tvarka rikiuotas masyvas: ");
+            Masyvas = NRikiavimas.RikiuokM(Masyvas);
+            NMasyvasIO.Spausdink(Masyvas);
+
+
+
+            //Console.WriteLine(Masyvas.Length);
+            Console.ReadLine();
+        }
+    }
+
+    public class MasyvasIO
+    {
+        public int[] Pildyk()
+        {
+            Console.Write("Masyvo elementu skaicius: ");
+            int ilgis = Convert.ToInt32(Console.ReadLine());
+            int[] masyvas = new int[ilgis];
+            Console.WriteLine("Masyvo elementai: ");
+            for (int i = 0; i < ilgis; i++)
+            {
+                Console.Write(i + 1 + " masyvo elementas: ");
+                masyvas[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            return masyvas;
+        }
+
+        public void Spausdink(int[] masyvas)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Masyvo elementai: ");
+            for (int i = 0; i < masyvas.Length; i++)
+            {
+                Console.WriteLine(i + 1 + " masyvo elementas: " + masyvas[i]);
+            }
+        }
+    }
+    public class Rikiavimas
+    {
+        public int[] RikiuokD(int[] masyvas)
+        {
+            Array.Sort<int>(masyvas);
+            return masyvas;
+        }
+        public int[] RikiuokM(int[] masyvas)
+        {
+            Array.Sort<int>(masyvas);
+            Array.Reverse(masyvas);
+            return masyvas;
+        }
+    }
+    public class ApdorokMasyva
+    {
+        public int[] ApdorokMasyvaa(int[] masyvas)
+        {
+            Console.Write("A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            int suma, vidurkis, n, j, x;
+            suma = 0;
+            n = 0;
+            j = 0;
+            vidurkis = 0;
+            if (A > B)
+            {
+                x = A;
+                A = B;
+                B = x;
+            }
+            for (int i = 0; i < masyvas.Length; i++)
+                {
+                    if (masyvas[i] >= A && masyvas[i] <= B)
+                    {
+                        n++;
+                        suma = suma + masyvas[i];
+                    }
+                }
+            int[] nmasyvas = new int[masyvas.Length - n];
+            if (n == 0)
+            {
+                Console.WriteLine("Nera elemetu tar A ir B");
+            }
+            else
+            {
+                vidurkis = suma / n;
+                for (int i = 0; i < masyvas.Length; i++)
+                {
+                    if (masyvas[i] < A || masyvas[i] > B)
+                    {
+                        nmasyvas[j] = masyvas[i];
+                        j++;
+                    }
+                }
+                Console.WriteLine("suma: " + suma);
+                Console.WriteLine("vidurkis: " + vidurkis);
+            }
+            
+            
+
+            return nmasyvas;
+        }
+    }
+}
